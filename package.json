@@ -1,7 +1,7 @@
 {
   "name": "rootify",
   "version": "1.0.0",
-  "description": "",
+  "description": "allow root-of-project (closest package.json) requires in browserify with `^`",
   "main": "index.js",
   "scripts": {
     "test": "browserify tests/index.js > tests/index.browser.js; google-chrome tests/index.html",
@@ -16,5 +16,16 @@
   },
   "devDependencies": {
     "tape": "^4.0.0"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KoryNunn/rootify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/KoryNunn/rootify/issues"
+  },
+  "homepage": "https://github.com/KoryNunn/rootify#readme"
 }

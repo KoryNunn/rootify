@@ -1,10 +1,10 @@
 # rootify
 
-allow root-of-project (closest package.json) requires with `^`
+allow root-of-project (closest package.json) requires in browserify with `^`
 
 ## Usage
 
-reference rootify however you'd like in your browserify flow, then, instead of:
+reference the rootify transform however you'd like in your browserify flow, then, instead of:
 
 ```
 var something = require('../../../../../something');
