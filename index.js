@@ -7,7 +7,7 @@ function getReplacement(file, currentPath) {
         var filePath = file.slice(1),
             root = findRoot(currentPath);
 
-        return path.join(path.relative(path.join(root, filePath), root), filePath);
+        return path.join(path.relative(path.dirname(currentPath), root), filePath);
     }
 
     return null;
