@@ -4,8 +4,8 @@
   "description": "allow root-of-project (closest package.json) requires in browserify with `^`",
   "main": "index.js",
   "scripts": {
-    "test": "browserify tests/index.js > tests/index.browser.js; google-chrome tests/index.html",
-    "watch": "watchify tests/index.js -o tests/index.browser.js"
+    "test": "browserify -d tests/index.js > tests/index.browser.js; google-chrome tests/index.html",
+    "watch": "watchify -d tests/index.js -o tests/index.browser.js"
   },
   "author": "Kory Nunn <knunn187@gmail.com>",
   "license": "ISC",

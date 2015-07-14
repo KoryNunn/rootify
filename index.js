@@ -4,7 +4,10 @@ var path = require('path'),
 
 function getReplacement(file, currentPath) {
     if(file.charAt(0) === '^') {
-        return findRoot(currentPath) + '/' + file.slice(1);
+        var filePath = file.slice(1),
+            root = findRoot(currentPath);
+
+        return path.join(path.relative(path.join(root, filePath), root), filePath);
     }
 
     return null;
@@ -19,19 +22,6 @@ function transform(args, opts, done) {
         var replacement = getReplacement(file, opts.file);
 
         if (replacement != null) {
-            if (replacement.relative != null) {
-                replacement = replacement.relative;
-            } else if (/^\./.test(replacement)) {
-                var fileDir = path.dirname(opts.file);
-                replacement = './' + (path.relative(fileDir, replacement));
-            }
-
-            if (/^[a-zA-Z]:\\/.test(replacement)) {
-                replacement = replacement.replace(/\\/gi, '\\\\');
-            } else {
-                replacement = replacement.replace(/\\/gi, '/');
-            }
-
             result = 'require("' + replacement + '")';
         }
     }
