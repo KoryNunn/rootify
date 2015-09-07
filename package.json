@@ -8,11 +8,10 @@
     "watch": "watchify -d tests/index.js -o tests/index.browser.js"
   },
   "author": "Kory Nunn <knunn187@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "app-root-path": "^1.0.0",
     "browserify-transform-tools": "^1.4.2",
-    "find-root": "^0.1.1"
+    "caroot": "^1.0.0"
   },
   "devDependencies": {
     "tape": "^4.0.0"
@@ -27,5 +26,14 @@
   "bugs": {
     "url": "https://github.com/KoryNunn/rootify/issues"
   },
-  "homepage": "https://github.com/KoryNunn/rootify#readme"
+  "homepage": "https://github.com/KoryNunn/rootify#readme",
+  "keywords": [
+    "caret",
+    "root",
+    "require",
+    "resolve",
+    "package",
+    "json",
+    "rooty"
+  ]
 }
