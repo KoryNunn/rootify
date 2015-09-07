@@ -1,17 +1,5 @@
-var path = require('path'),
-    findRoot = require('find-root'),
-    transformTools = require('browserify-transform-tools');
-
-function getReplacement(file, currentPath) {
-    if(file.charAt(0) === '^') {
-        var filePath = file.slice(1),
-            root = findRoot(currentPath);
-
-        return path.join(path.relative(path.dirname(currentPath), root), filePath);
-    }
-
-    return null;
-}
+var transformTools = require('browserify-transform-tools'),
+    caroot = require('caroot');
 
 function transform(args, opts, done) {
     var file = args[0],
@@ -19,7 +7,7 @@ function transform(args, opts, done) {
 
 
     if (file != null) {
-        var replacement = getReplacement(file, opts.file);
+        var replacement = caroot(file, opts.file);
 
         if (replacement != null) {
             result = 'require("' + replacement + '")';
