@@ -19,3 +19,15 @@ and in your package.json:
 ```
 
 You can add a bare package.json file to your scripts folder to make rootify resolve to that location.
+
+And then, instead of:
+
+```
+var something = require('../../../../../something');
+```
+
+You can use:
+
+```
+var something = require('^something');
+```
