@@ -1,31 +1,21 @@
-# rooty
+# rootify
 
 Allow root-of-project (closest package.json) requires in browserify with `^`
 
 ## Usage
 
-Require rooty as the first thing in your entry file:
-
-```javascript
-
-require('rooty');
-
-// more app code
+rootify is a browserify transform.
 
 ```
-
-And then, instead of:
-
-```javascript
-
-var something = require('../../../../../something');
-
+npm i --save-dev rootify
 ```
 
-You can use:
-
-```javascript
-
-var something = require('^something');
+and in your package.json:
 
 ```
+  "browserify": {
+    "transform": [ "rootify" ]
+  }
+```
+
+You can add a bare package.json file to your scripts folder to make rootify resolve to that location.
