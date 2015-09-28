@@ -1,6 +1,6 @@
 {
   "name": "rootify",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "allow root-of-project (closest package.json) requires in browserify with `^`",
   "main": "index.js",
   "scripts": {
