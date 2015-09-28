@@ -2,7 +2,7 @@ var transformTools = require('browserify-transform-tools'),
     caroot = require('caroot');
 
 function transform(args, opts, done) {
-    return done(null, 'require("' + caroot(args[0], opts.file) + '")');
+    done(null, 'require("' + caroot(args[0], opts.file, opts.config.rootPath) + '")');
 }
 
 module.exports = transformTools.makeRequireTransform(

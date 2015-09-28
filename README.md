@@ -18,7 +18,13 @@ and in your package.json:
   }
 ```
 
-You can add a bare package.json file to your scripts folder to make rootify resolve to that location.
+And optionally..
+
+```
+  "rootify": {
+    "rootPath": "./someRelativePath"
+  }
+```
 
 And then, instead of:
 

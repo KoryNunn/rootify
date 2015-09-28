@@ -11,7 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "browserify-transform-tools": "^1.4.2",
-    "caroot": "^1.0.0"
+    "caroot": "^1.1.0"
   },
   "devDependencies": {
     "tape": "^4.0.0"
